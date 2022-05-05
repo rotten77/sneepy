@@ -1,2 +1,3 @@
 # sneepy
+
 Snippets Manager
