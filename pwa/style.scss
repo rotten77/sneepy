@@ -1,0 +1,143 @@
+// @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import "./bootstrap/functions";
+
+// Sneepy theme
+$dark: #212121;
+$dark-light: #333;
+$dark-lighter: #555;
+$primary: $dark-lighter;
+
+$body-bg: $dark;
+$list-group-bg: $body-bg;
+$body-color: #fff;
+$list-group-color: $body-color;
+$list-group-border-color: $dark-light;
+
+$card-border-color: $dark-light;
+$card-bg: $body-bg;
+
+$card-cap-bg: $dark-lighter;
+$input-border-color:  $dark-light;
+
+$list-group-active-bg: $dark-lighter;
+
+$font-size-base: 0.9rem;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "./bootstrap/variables";
+@import "./bootstrap/mixins";
+
+// Layout & components
+@import "./bootstrap/root";
+@import "./bootstrap/reboot";
+@import "./bootstrap/type";
+// @import "./bootstrap/images";
+@import "./bootstrap/containers";
+@import "./bootstrap/grid";
+// @import "./bootstrap/tables";
+@import "./bootstrap/forms";
+@import "./bootstrap/buttons";
+// @import "./bootstrap/transitions";
+// @import "./bootstrap/dropdown";
+@import "./bootstrap/button-group";
+// @import "./bootstrap/nav";
+// @import "./bootstrap/navbar";
+@import "./bootstrap/card";
+// @import "./bootstrap/accordion";
+// @import "./bootstrap/breadcrumb";
+// @import "./bootstrap/pagination";
+// @import "./bootstrap/badge";
+// @import "./bootstrap/alert";
+// @import "./bootstrap/progress";
+@import "./bootstrap/utilities";
+@import "./bootstrap/list-group";
+// @import "./bootstrap/close";
+// @import "./bootstrap/toasts";
+// @import "./bootstrap/modal";
+// @import "./bootstrap/tooltip";
+// @import "./bootstrap/popover";
+// @import "./bootstrap/carousel";
+// @import "./bootstrap/spinners";
+// @import "./bootstrap/offcanvas";
+// @import "./bootstrap/placeholders";
+
+// Helpers
+@import "./bootstrap/helpers";
+
+// Utilities
+@import "./bootstrap/utilities/api";
+// scss-docs-end import-stack
+html, body, .container, .container-fluid, .row, div[class*="col-"] {
+	height:100%;
+}
+div[class*="col-"] {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.list-group-item {
+	cursor:pointer;
+	&:hover, &.active {
+		color: $list-group-active-color;
+		background-color: $list-group-active-bg;
+		border-color: $list-group-active-border-color;
+	}
+}
+
+#sidebar ul:first-child li {
+	font-weight:bold;
+}
+
+.card-header span, .card-body {
+	cursor:pointer;
+}
+
+pre {
+	margin-bottom: 0;
+	overflow:hidden;
+	margin-top:0;
+	max-height:320px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+@keyframes copied_animation {
+	from {background: #4CAF50;}
+	to {background: $card-bg;}
+}
+
+.card-body {
+	&:hover {
+		background: #353535;
+	}
+	&.copied {
+		animation-name: copied_animation;
+		animation-duration: 2s;
+	}
+}
+
+/* ===== Scrollbar CSS ===== */
+/* https://codepen.io/stephenpaton-tech/full/JjRvGmY */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: $dark-lighter $dark-light;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: $dark-light;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: $dark-lighter;
+    border-radius: 6px;
+    border: 0px solid #000000;
+	&:hover {
+		background-color: #666;
+	}
+  }
