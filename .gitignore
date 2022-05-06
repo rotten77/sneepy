@@ -1,2 +1,5 @@
-snippets/*
+/snippets/*
 __pycache__
+/build
+/dist
+/pwa/bootstrap/*.css
