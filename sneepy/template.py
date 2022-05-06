@@ -19,7 +19,7 @@ class Template:
 			print(Fore.RED + f'read "{file}": {type(ex).__name__}' + Style.RESET_ALL)
 	
 	def render(self, data):
-		template = self.getFileContent('template.jinja.html')
+		template = self.getFileContent('template.html.jinja')
 		css = self.getFileContent('style.min.css')
 		js = self.getFileContent('sneepy.api.js')
 
