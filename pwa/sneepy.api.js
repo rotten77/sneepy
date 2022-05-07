@@ -83,23 +83,15 @@ function addSnippet() {
 		return false;
 	}
 	let fileName = prompt("Enter file name");
-	let response = ""
 	if (fileName != null) {
-		response = pywebview.api.addSnippet(selectedFolder, fileName);
-	}
-	if(response!="") {
-		alert(response)
+		pywebview.api.addSnippet(selectedFolder, fileName);
 	}
 }
 
 function addFolder() {
 	let folderName = prompt("Enter folder name");
-	let response = ""
 	if (folderName != null) {
-		response = pywebview.api.addFolder(folderName);
-	}
-	if(response!="") {
-		alert(response)
+		pywebview.api.addFolder(folderName);
 	}
 }
 

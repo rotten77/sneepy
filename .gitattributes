@@ -1,2 +1,3 @@
 pwa/bootstrap/** linguist-vendored=true
+*.cmd linguist-vendored=true
 pwa/style.min.css linguist-generated=true
