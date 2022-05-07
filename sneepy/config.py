@@ -4,8 +4,8 @@ from lxml import etree
 class Config:
 
 	def __init__(self):
-		self.APP_ROOT = str(pathlib.Path(__file__).parent.parent.absolute())
-		self.CONFIG_PATH = self.APP_ROOT + '\sneepy.xml'
+		self.APP_ROOT = './'
+		self.CONFIG_PATH = self.APP_ROOT + 'sneepy.xml'
 	
 	def getAppPath(self):
 		return self.APP_ROOT
@@ -18,7 +18,6 @@ class Config:
 	
 	def getSnippetsPath(self):
 		snippetspath = self.getValue('snippetsFolder')
-		snippetspath = snippetspath.replace("%SNEEPY%", self.APP_ROOT)
 
 		return snippetspath
 	

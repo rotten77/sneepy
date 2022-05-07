@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
-	<snippetsFolder>%SNEEPY%\snippets</snippetsFolder>
+	<snippetsFolder>snippets</snippetsFolder>
 	<autoMinimize>true</autoMinimize>
 	<window>
-		<width>1200</width>
-		<height>800</height>
+		<width>960</width>
+		<height>720</height>
 	</window>
 </configuration>
