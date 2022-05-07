@@ -1,5 +1,5 @@
-import pathlib
 from lxml import etree
+import sys
 
 class Config:
 
@@ -8,7 +8,11 @@ class Config:
 		self.CONFIG_PATH = self.APP_ROOT + 'sneepy.xml'
 	
 	def getAppPath(self):
-		return self.APP_ROOT
+		if getattr(sys, 'frozen', False):
+			return sys._MEIPASS
+		else:
+			return self.APP_ROOT
+
 	
 	def getValue(self, xpath):
 		root = etree.parse(self.CONFIG_PATH)
