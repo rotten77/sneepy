@@ -1,2 +1,4 @@
 Sneepy 1.1:
 	☐ Add variables to snippets (e.g. %VARIABLE%)
+	☐ Save window size (add <autosave> to configuration)
+	☐ Rename folder/files to safe name
