@@ -1,6 +1,5 @@
 import os
 from .config import Config
-from colorama import Fore, Style
 from jinja2 import Template as JinjaTemplate
 
 config = Config()
@@ -16,7 +15,7 @@ class Template:
 			return fileContent
 
 		except Exception as ex:
-			print(Fore.RED + f'read "{file}": {type(ex).__name__}' + Style.RESET_ALL)
+			print(f'read "{file}": {type(ex).__name__}')
 	
 	def render(self, data):
 		template = self.getFileContent('template.html.jinja')
@@ -32,6 +31,7 @@ class Template:
 			},
 			'config': {
 				'minimize': config.getValue('autoMinimize'),
+				'version': config.VERSION,
 			}
 		}
 

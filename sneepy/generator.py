@@ -1,7 +1,6 @@
 import os
 from .config import Config
 from .template import Template
-from colorama import Fore, Style
 import html
 
 config = Config()
@@ -36,7 +35,7 @@ class Generator:
 			return fileContent
 
 		except Exception as ex:
-			print(Fore.RED + f'read "{file}": {type(ex).__name__}' + Style.RESET_ALL)
+			print(f'read "{file}": {type(ex).__name__}')
 	
 	def generate(self):
 		snippets = []
@@ -50,7 +49,7 @@ class Generator:
 					snippetId += 1
 					snippets.append({'id': snippetId, 'title': file, 'folder': folder, 'code': html.escape(code)})
 				except Exception as ex:
-					print(Fore.RED + f'read "{file}": {type(ex).__name__}' + Style.RESET_ALL)
+					print(f'read "{file}": {type(ex).__name__}')
 		
 		data = {
 			'folders': self.getFolders(),
