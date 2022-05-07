@@ -2,6 +2,7 @@ import pyperclip
 import os
 from .config import Config
 from .generator import Generator
+import subprocess
 
 config = Config()
 
@@ -20,7 +21,7 @@ class Api:
 		self._window.minimize()
 
 	def editFile(self, folder, fileName):
-		os.system(f'notepad.exe {os.path.join(config.getSnippetsPath(), folder, fileName)}')
+		subprocess.Popen(f'notepad.exe {os.path.join(config.getSnippetsPath(), folder, fileName)}')
 
 	def addSnippet(self, selectedFolder, fileName):
 		try:
@@ -45,10 +46,9 @@ class Api:
 		return ""
 
 	def manageFiles(self):
-		os.system(f'explorer.exe {os.path.join(config.getSnippetsPath())}')
+		subprocess.Popen(f'explorer.exe {os.path.join(config.getSnippetsPath())}')
 	
 	def reload(self):
-		# self._window.load_html('<p>Reloading...</p>')
 		generator = Generator()
 		self._window.load_html(generator.generate())
 		
