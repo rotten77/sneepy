@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <configuration>
-	<snippetsFolder>snippets</snippetsFolder>
-	<autoMinimize>true</autoMinimize>
-	<window>
-		<width>960</width>
-		<height>720</height>
-	</window>
+  <snippetsFolder>snippets</snippetsFolder>
+  <autoMinimize>false</autoMinimize>
+  <window>
+    <width>960</width>
+    <height>720</height>
+  </window>
 </configuration>
