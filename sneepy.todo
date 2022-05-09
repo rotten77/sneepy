@@ -1,9 +1,15 @@
-Sneepy 1.1:
-	☐ Add variables to snippets (e.g. %VARIABLE%)
-	☐ Save window size (add <autosave> to configuration)
-	☐ Rename folder/files to safe name
-	☐ Catch exceptions/errors
-		☐ snippet folder not exists or empty
-		☐ add folder, add/edit snippet
-		☐ configuration
-		☐ folder/file operation in generator
+Backlog:
+☐ add syntax highlighter (https://prismjs.com/)
+☐ add loading screen (with pywebviewready https://github.com/r0x0r/pywebview/blob/master/examples/js_api.py)
+☐ 3×3 grid for one-character snippets (configuration: <gridView folders=""/>)
+☐ snippet max heigh(configuration: <autosave/>)
+☐ order by name
+☐ configurable editor
+☐ file system watchdog
+☐ variables in snippets (e.g. %VARIABLE%)
+☐ save window size (configuration: <autosave/>)
+☐ catch exceptions/errors
+	☐ snippet folder not exists or empty
+	☐ add folder, add/edit snippet
+	☐ configuration syntax
+	☐ folder/file operations in generator
