@@ -8,7 +8,7 @@ example = Example()
 class Config:
 	"""Configuration"""
 
-	VERSION = '1.1.0'
+	VERSION = '1.1.0.2'
 
 	def __init__(self):
 		self.APP_ROOT = './'

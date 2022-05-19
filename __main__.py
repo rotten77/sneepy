@@ -1,11 +1,12 @@
 from sneepy.config import Config
-from sneepy.generator import Generator
+from sneepy.template import Template
 from sneepy.api import Api
 import webview
 
-generator = Generator()
+template = Template()
 config = Config()
-html = generator.generate()
+
+html = template.renderLoading()
 
 api = Api()
 window_size = config.getWindowSize()

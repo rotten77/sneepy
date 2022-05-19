@@ -1,6 +1,6 @@
 Backlog:
 ✔ add syntax highlighter (https://prismjs.com/) @done(2022-05-19 19:28)
-☐ add loading screen (with pywebviewready https://github.com/r0x0r/pywebview/blob/master/examples/js_api.py)
+✔ add loading screen (with pywebviewready https://github.com/r0x0r/pywebview/blob/master/examples/js_api.py) @done(2022-05-19 21:24)
 ☐ 3×3 grid for one-character snippets (configuration: <gridView folders=""/>)
 ☐ snippet max heigh(configuration: <autosave/>)
 ☐ order by name

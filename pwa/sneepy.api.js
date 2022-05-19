@@ -107,5 +107,5 @@ function manageFiles() {
 
 function reload() {
 	document.getElementById('reload').classList.add('disabled');
-	pywebview.api.reload();
+	pywebview.api.load();
 }

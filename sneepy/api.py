@@ -2,6 +2,7 @@ import pyperclip
 import os
 from .config import Config
 from .generator import Generator
+from .template import Template
 import subprocess
 
 config = Config()
@@ -48,6 +49,10 @@ class Api:
 
 	def manageFiles(self):
 		subprocess.Popen(f'explorer.exe {os.path.join(config.getSnippetsPath())}')
+
+	def load(self):
+		template = Template()
+		self._window.load_html(template.renderLoading())
 	
 	def reload(self):
 		generator = Generator()

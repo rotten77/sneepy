@@ -18,6 +18,25 @@ class Template:
 		except Exception as ex:
 			print(f'read "{file}": {type(ex).__name__}')
 	
+	def renderLoading(self):
+		template = self.getFileContent('loading.html.jinja')
+		css = self.getFileContent('style.min.css')
+		js = self.getFileContent('sneepy.api.js')
+
+		template_data = {
+			'assets': {
+				'css': css,
+				'js': js,
+			},
+			'config': {
+				'minimize': config.getValue('autoMinimize'),
+				'version': config.VERSION,
+			}
+		}
+
+		j2_template = JinjaTemplate(template)
+		return j2_template.render(template_data)
+
 	def render(self, data):
 		template = self.getFileContent('template.html.jinja')
 		css = self.getFileContent('style.min.css')

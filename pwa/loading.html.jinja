@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Loading Sneepy {{config.version}}</title>
+
+<style>
+{{assets.css}}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col text-center" style="height: 100px;">
+			<div class="align-middle">
+				<h1 class="display-3">Sneepy {{config.version}}</h1>
+				<div><i>Loading &hellip;</i></div>
+			</div>
+		</div>
+</div>
+
+<script>
+config_minimize = {{config.minimize}};
+window.addEventListener('pywebviewready', function() {
+	pywebview.api.reload();
+})
+</script>
+</body>
+</html>
