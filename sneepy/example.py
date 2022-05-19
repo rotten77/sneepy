@@ -2,6 +2,8 @@ import os
 
 class Example():
 
+	"""Generate example snippets"""
+
 	def createFile(self, file, content):
 		fp = open(file, 'w+', encoding='utf-8')
 		fp.write(content)

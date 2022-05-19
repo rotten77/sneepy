@@ -8,6 +8,7 @@
 
 <style>
 {{assets.css}}
+{{assets.prism.css}}
 </style>
 </head>
 
@@ -45,7 +46,7 @@
 			<div class="card mb-3 snippet" data-snippet-id="{{snippet.id}}" data-folder="{{snippet.folder}}" data-title="{{snippet.title}}">
 				<div class="card-header"><span onclick="javascript:editSnippet('{{snippet.folder}}', '{{snippet.title}}');return false;">{{snippet.title}}</span></div>
 				<div class="card-body" id="snippet{{snippet.id}}" data-snippet-id="{{snippet.id}}" onclick="javascript:copySnippet(this);return false;">
-					<pre>{{snippet.code}}</pre>
+					<pre><code class="language-{{snippet.ext}}">{{snippet.code}}</code></pre>
 				</div>
 			</div>
 			{% endfor %}
@@ -57,6 +58,7 @@
 <script>
 config_minimize = {{config.minimize}};
 {{assets.js}}
+{{assets.prism.js}}
 </script>
 </body>
 </html>

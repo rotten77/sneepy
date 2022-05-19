@@ -5,6 +5,7 @@ from jinja2 import Template as JinjaTemplate
 config = Config()
 
 class Template:
+	"""Template renderer"""
 
 	def getFileContent(self, file):
 		try:
@@ -21,6 +22,8 @@ class Template:
 		template = self.getFileContent('template.html.jinja')
 		css = self.getFileContent('style.min.css')
 		js = self.getFileContent('sneepy.api.js')
+		prism_js = self.getFileContent('prism.js')
+		prism_css = self.getFileContent('prism.css')
 
 		template_data = {
 			'folders': data['folders'],
@@ -28,6 +31,10 @@ class Template:
 			'assets': {
 				'css': css,
 				'js': js,
+				'prism': {
+					'css': prism_css,
+					'js': prism_js,
+				}
 			},
 			'config': {
 				'minimize': config.getValue('autoMinimize'),

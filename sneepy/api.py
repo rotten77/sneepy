@@ -7,6 +7,7 @@ import subprocess
 config = Config()
 
 class Api:
+	"""JavaScript API"""
 
 	def __init__(self):
 		self._window = None

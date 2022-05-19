@@ -7,6 +7,7 @@ config = Config()
 template = Template()
 
 class Generator:
+	"""Snippets generator"""
 	
 	def getFolders(self):
 
@@ -16,6 +17,10 @@ class Generator:
 			folders.append(folder)
 		
 		return folders
+	
+	def getFileExtension(self, file):
+		ext = os.path.splitext(file)[1]
+		return ext[1:]
 
 	def getFiles(self, folder):
 
@@ -47,7 +52,7 @@ class Generator:
 				try:
 					code = self.getFileContent(folder, file)
 					snippetId += 1
-					snippets.append({'id': snippetId, 'title': file, 'folder': folder, 'code': html.escape(code)})
+					snippets.append({'id': snippetId, 'title': file, 'folder': folder, 'code': html.escape(code), 'ext': self.getFileExtension(file)})
 				except Exception as ex:
 					print(f'read "{file}": {type(ex).__name__}')
 		
